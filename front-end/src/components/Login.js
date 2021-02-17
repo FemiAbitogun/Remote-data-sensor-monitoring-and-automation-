@@ -13,7 +13,6 @@ function Login() {
     const nameChange = (e) => { setName(e.target.value) }
     const passwordChange = (e) => { setPassword(e.target.value) }
 
-
     const formSubmit = async (e) => {
         e.preventDefault();
 
@@ -32,6 +31,25 @@ function Login() {
     }
 
 
+    const returnError = () => {
+        // document.querySelector(".error").addEventListener("click", () => {
+        //     setError("");
+        // })
+
+
+        setTimeout(() => {
+            setError("");
+        }, 2000)
+
+        return (
+            <section>
+                <h3>{error} </h3>
+            </section>
+
+        )
+
+
+    }
 
 
 
@@ -44,7 +62,7 @@ function Login() {
                 <h1>LOGIN</h1>
                 <div className="login-form ">
                     <div className="error">
-                        {error ? (<h3>{error}</h3>) : ""}
+                        {error ? returnError() : ""}
                     </div>
                     <input id="name" type="text" placeholder="name" onChange={nameChange} />
                     <input id="password" type="text" placeholder="password" onChange={passwordChange} />

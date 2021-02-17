@@ -75,11 +75,12 @@ border: none;
 }
 
 .login-form .error {
-  background-color: whitesmoke;
+  background-color: rgb(245, 245, 245);
   color: red;
   width: 35vh;
 
 }
+
 
 
 

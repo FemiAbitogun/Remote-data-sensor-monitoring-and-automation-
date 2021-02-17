@@ -86,8 +86,7 @@ router.post("/verify", async (req, res) => {
             return res.json(false)
 
         const verifyToken = jwt.verify(token, process.env.jwt_secret);
-        console.log(verifyToken)
-
+        
         if (!verifyToken)
             return res.json(false);
 
@@ -96,7 +95,7 @@ router.post("/verify", async (req, res) => {
 
 
     } catch (error) {
-        res.status(500).json({ error: error.message });
+        res.status(500).json();
     }
 
 });

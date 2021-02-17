@@ -6,6 +6,10 @@ function Navbar() {
               <div className="title">
                     <h1>REMOTE MONITORING SYSTEM DASHBOARD</h1>
                 </div>
+
+
+    
+            
         </div>
     )
 }
